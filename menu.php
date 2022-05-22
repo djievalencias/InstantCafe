@@ -1,10 +1,10 @@
 <?php
 class Menu {
-  protected $name;
-  protected $price;
-  protected $image;
+  private $name;
+  private $price;
+  private $image;
   private $orderCount = 0;
-  protected static $count = 0;
+  private static $count = 0;
   
   public function __construct($name, $price, $image) {
     $this->name = $name;

@@ -1,45 +1,23 @@
-<?php 
-require_once('data.php');
-require_once('menu.php');
-?>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Instant Café</title>
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link href='https://fonts.googleapis.com/css?family=Pacifico|Lato' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <title>Instant Café</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico|Lato' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
-  <div class="menu-wrapper container">
-    <h1 class="logo">Instant Café</h1>
-    <h3>Jumlah item: <?php echo Menu::getCount() ?></h3>
-    <form method="post" action="confirm.php">
-      <div class="menu-items">
-        <?php foreach ($menus as $menu): ?>
-          <div class="menu-item">
-            <img src="<?php echo $menu->getImage() ?>" class="menu-item-image">
-            <h3 class="menu-item-name">
-              <a href="show.php?name=<?php echo $menu->getName() ?>">
-                <?php echo $menu->getName() ?>
-              </a>
-            </h3>
-            <?php if ($menu instanceof Drink): ?>
-              <p class="menu-item-type"><?php echo $menu->getType() ?></p>
-            <?php else: ?>
-              <?php for ($i=0; $i<$menu->getSpiciness(); $i++): ?>
-                <img src="img\chilli.png" class='icon-spiciness'>
-              <?php endfor ?>
-            <?php endif ?>
-            <p class="price">Rp<?php echo (number_format($menu->getTaxIncludedPrice() , 0, ',', '.')) ?> (termasuk pajak)</p>
-            <span>Qty: </span>
-            <input type="text" value="0" name="<?php echo $menu->getName() ?>">
-          </div>
-        <?php endforeach ?>
-      </div>
-      <input type="submit" value="Pesan">
-    </form>
-  </div>
+    <div class="bg">
+        <div class="landing-page-container">
+            <h2>Selamat datang di</h2>
+            <h1 class="landing-page-logo">Instant Café</h1>
+            <p class="description" style="font-size: 20px;">Best Café in Town.</p>
+            <p class="inline"><img src="img/telephone.png" class="desc-icon"> (024) 1234567</p>
+            <p class="inline" style="margin-left: 15px;"><img src="img/location.png" class="desc-icon"> Jl. Melati No. 12, Semarang</p>
+            <p style="margin-top: 25px;">Operating Hours:<br/>Senin-Jumat: 8.00-14.00<br/>Sabtu-Minggu: 9.00-15.00</p>
+            <a href="order.php">Lihat Menu →</a>
+        </div>
+    </div>
 </body>
 </html>

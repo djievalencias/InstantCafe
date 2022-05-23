@@ -53,7 +53,7 @@ $menuReviews = $menu->getReviews($reviews);
         <?php endforeach ?>
       </div>
     </div>
-    <a href="index.php">← Kembali ke Menu</a>
+    <a href="order.php">← Kembali ke Menu</a>
   </div>
 </body>
 </html>

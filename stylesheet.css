@@ -49,6 +49,59 @@ img {
   margin-left: auto;
 }
 
+/* Landing Page CSS */
+.landing-page-container {
+  width: 500px;
+  margin-left: 150px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.landing-page-container h2 {
+  font-size: 30px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  line-height: 50px;
+}
+
+.landing-page-container p {
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+
+.bg {
+  height: 100vh;
+  background-image: url(img/bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.landing-page-logo {
+  font-family: Pacifico, sans-serif;
+  font-size: 40px;
+  color: #4ac0b9;
+  display: inline-block;
+  padding: 20px 0;
+  margin: 30px 0;
+  border-top: 5px solid #42c7c1;
+  border-bottom: 5px solid #42c7c1;
+}
+
+.desc-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.inline {
+  display: inline;
+}
+
 /* Menu CSS */
 .logo {
   font-family: Pacifico, sans-serif;
@@ -96,6 +149,10 @@ img {
 
 .menu-item-image {
   border-radius: 5px;
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .icon-spiciness {

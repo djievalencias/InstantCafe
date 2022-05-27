@@ -9,6 +9,7 @@ require_once('menu.php');
   <meta charset="utf-8">
   <title>Instant Café</title>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Pacifico|Lato' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -34,11 +35,11 @@ require_once('menu.php');
             <?php endif ?>
             <p class="price">Rp<?php echo (number_format($menu->getTaxIncludedPrice() , 0, ',', '.')) ?> (termasuk pajak)</p>
             <span>Qty: </span>
-            <input type="text" value="0" name="<?php echo $menu->getName() ?>">
+            <input type="number" min="0" value="0" name="<?php echo $menu->getName() ?>">
           </div>
         <?php endforeach ?>
       </div>
-      <input type="submit" value="Pesan">
+      <input type="submit" value="Pesan" id="submit-button">
     </form>
   </div>
 </body>

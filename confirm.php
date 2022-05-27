@@ -11,7 +11,7 @@
 <body>
   <div class="order-wrapper">
     <h2>Keranjang</h2>
-    <?php $totalPayment = 0 ?>
+    <?php $totalPayment = 0; $switch = 0; ?>
     
     <?php foreach ($menus as $menu): ?>
       <?php 
@@ -19,14 +19,23 @@
         $menu->setOrderCount($orderCount);
         $totalPayment += $menu->getTotalPrice();
       ?>
-      <p class="order-amount">
-        <?php echo $menu->getName() ?>
-        x
-        <?php echo (int)$orderCount ?>
-      </p>
-      <p class="order-price">Rp<?php echo (number_format($menu->getTotalPrice() , 0, ',', '.')) ?></p>
+      <?php if($orderCount > 0): ?>
+        <p class="order-amount">
+          <?php echo $menu->getName() ?>
+          x
+          <?php echo (int)$orderCount ?>
+        </p>
+        <p class="order-price">Rp<?php echo (number_format($menu->getTotalPrice() , 0, ',', '.')) ?></p>
+      <?php
+        $switch = 1;
+        endif; 
+      ?>
     <?php endforeach ?>
-    <h3>Harga total: Rp<?php echo (number_format($totalPayment , 0, ',', '.')) ?></h3>
+    <?php if($switch == 0): ?>
+        <p>Maaf keranjang kosong! Anda belum memesan apapun :(</p>
+    <?php else: ?>
+      <h3>Harga total: Rp<?php echo (number_format($totalPayment , 0, ',', '.')) ?></h3>
+    <?php endif ?>
   </div>
 </body>
 </html>

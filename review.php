@@ -1,7 +1,6 @@
 <?php
 class Review {
   private $menuName;
-  // Ubah $userName ke $userId
   private $userId;
   private $body;
 
@@ -23,7 +22,6 @@ class Review {
   
   public function getUser($users) {
     foreach ($users as $user) {
-      // Tulis ulang code dibawah
       if ($user->getId() == $this->userId) {
         return $user;
       }

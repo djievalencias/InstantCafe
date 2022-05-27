@@ -12,11 +12,7 @@ class Menu {
     $this->image = $image;
     self::$count++;
   }
-  
-  public function hello() {
-    echo 'Saya adalah '.$this->name;
-  }
-  
+    
   public function getName() {
     return $this->name;
   }

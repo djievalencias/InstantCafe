@@ -9,7 +9,6 @@ require_once('menu.php');
   <meta charset="utf-8">
   <title>Instant Café</title>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Pacifico|Lato' rel='stylesheet' type='text/css'>
 </head>
 <body>

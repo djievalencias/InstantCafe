@@ -16,6 +16,8 @@
     <?php foreach ($menus as $menu): ?>
       <?php 
         $orderCount = $_POST[$menu->getName()];
+        if ($orderCount == "")
+          $orderCount = 0;
         $menu->setOrderCount($orderCount);
         $totalPayment += $menu->getTotalPrice();
       ?>

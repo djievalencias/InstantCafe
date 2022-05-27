@@ -32,7 +32,7 @@
       ?>
     <?php endforeach ?>
     <?php if($switch == 0): ?>
-        <p>Maaf keranjang kosong! Anda belum memesan apapun :(</p>
+        <p>Maaf, keranjang anda kosong! Anda belum memesan apapun :(</p>
     <?php else: ?>
       <h3>Harga total: Rp<?php echo (number_format($totalPayment , 0, ',', '.')) ?></h3>
     <?php endif ?>

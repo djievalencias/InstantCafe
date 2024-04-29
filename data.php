@@ -15,7 +15,7 @@ $menus = array($juice, $coffee, $chocolate, $curry, $pasta, $lasagna);
 
 $user1 = new User('Alex', 'pria');
 $user2 = new User('Emma', 'wanita');
-$user3 = new User('Alex', 'wanita');
+$user3 = new User('Jessica', 'wanita');
 $user4 = new User('Chris', 'pria');
 $user5 = new User('Ryle', 'pria');
 $user6 = new User('Lily', 'wanita');
